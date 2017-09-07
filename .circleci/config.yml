@@ -40,6 +40,13 @@ jobs:
         
       # run tests!
       - run: gradle test
+      - run: gradle build
+
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: infinity-ci-test # appname must not include upper-case characters
 
 
 
